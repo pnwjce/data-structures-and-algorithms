@@ -64,8 +64,11 @@ Write a function named removeWithForEach that produces the same output as challe
 ------------------------------------------------------------------------------------------------ */
 
 const removeWithForEach = (arr, callback) => {
-  // Solution code here...
-}
+  arr.forEach((num, index, arr) => {
+    callback(num, arr);
+  });
+  return arr;
+};
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5
@@ -138,12 +141,12 @@ describe('Testing challenge 3', () => {
   });
 });
 
-// describe('Testing challenge 4', () => {
-//   test('It should remove three elements from the array', () => {
-//     expect(removeWithForEach([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], removeOne)).toStrictEqual([1, 2, 3, 4, 5, 6, 7]);
-//     expect(removeWithForEach([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], removeOne).length).toStrictEqual(7);
-//   });
-// });
+describe('Testing challenge 4', () => {
+  test('It should remove three elements from the array', () => {
+    expect(removeWithForEach([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], removeOne)).toStrictEqual([1, 2, 3, 4, 5, 6, 7]);
+    expect(removeWithForEach([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], removeOne).length).toStrictEqual(7);
+  });
+});
 
 // describe('Testing challenge 5', () => {
 //   test('It should remove three elements from the array', () => {
