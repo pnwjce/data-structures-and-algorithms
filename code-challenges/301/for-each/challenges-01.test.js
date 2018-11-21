@@ -101,14 +101,13 @@ This function should use forEach to populate your grocery list based on the stor
 ------------------------------------------------------------------------------------------------ */
 
 const createList = (availableItems) => {
-  let newArray = [];
-  availableItems.forEach((name, index, available) => {
-    if (available.value === true) {
-      newArray.push(name.value);
+  let inventoryArray = [];
+  availableItems.forEach((element) => {
+    if (element.available) {
+      inventoryArray.push(element.name);
     }
-    else;
   });
-  return newArray;
+  return inventoryArray;
 };
 
 
@@ -124,8 +123,20 @@ Return the resulting output array.
 ------------------------------------------------------------------------------------------------ */
 
 const fizzbuzz = (arr) => {
-  // Solution code here...
-}
+  arr.forEach((num, index, arr) => {
+    if (num % 3 === 1) {
+      arr.push('Fizz');
+    }
+    else if (num % 5 === 1) {
+      arr.push('Buzz');
+    }
+    else if (num % 3 === 1 && num % 5 === 1) {
+      arr.push('Fizz Buzz');
+    }
+    else (arr.push(num));
+  });
+  return arr;
+};
 
 /* ------------------------------------------------------------------------------------------------
 TESTS
@@ -177,11 +188,11 @@ describe('Testing challenge 6', () => {
   });
 });
 
-// describe('Testing challenge 7', () => {
-//   const inputs = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16];
+describe('Testing challenge 7', () => {
+  const inputs = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16];
 
-//   test('It should print out messages or numbers', () => {
-//     expect(fizzbuzz(inputs)).toStrictEqual([1, 2, 'Fizz', 4, 'Buzz', 'Fizz', 7, 8, 'Fizz', 'Buzz', 11, 'Fizz', 13, 14, 'Fizz Buzz', 16]);
-//     expect(fizzbuzz(inputs).length).toStrictEqual(16);
-//   });
-// });
+  test('It should print out messages or numbers', () => {
+    expect(fizzbuzz(inputs)).toStrictEqual([1, 2, 'Fizz', 4, 'Buzz', 'Fizz', 7, 8, 'Fizz', 'Buzz', 11, 'Fizz', 13, 14, 'Fizz Buzz', 16]);
+    expect(fizzbuzz(inputs).length).toStrictEqual(16);
+  });
+});
