@@ -3,7 +3,7 @@
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 1
 Write a function named isNum that takes in a string or number of any length. This function should use a regular expression pattern to return true if the input contains a number, and false if the input does not contain a number.
-For example: 
+For example:
 12345 returns true
 '12345' returns true
 'h3llo world' returns true
@@ -80,9 +80,8 @@ For example, 'Welcome to Code 301!' will return 'W_lc_m_ t_ C_d_ 301!'.
 
 let hangman = (str) => {
   // Solution code here...
-  let regEx4 = /[AaEeIiOoUu]/g;
-  str = str.replace(regEx4, '_');
-  console.log(str);
+  let regEx5 = /[AaEeIiOoUu]/g;
+  str = str.replace(regEx5, '_');
   return str;
 };
 
@@ -97,7 +96,20 @@ const seashells = 'She sells seashells by the seashore. The shells she sells are
 
 const findShells = (str) => {
   // Solution code here...
+  let regEx6 = /[.]/g;
+  str = str.replace(regEx6, '');
+  let ellsArray = [];
+  let strArray = str.split(' ');
 
+  
+  for(let i = 0; i < strArray.length; i++){
+    let regEx7 = /[Ee][Ll][Ll][Ss]/;
+    if(strArray[i].match(regEx7)!== null){
+      ellsArray.push(strArray[i]);
+    }
+  }
+  console.log(ellsArray);
+  return ellsArray;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -143,23 +155,23 @@ describe('Testing challenge 3', () => {
   });
 });
 
-// describe('Testing challenge 4', () => {
-//   test('It should match any of the acceptable inputs', () => {
-//     expect(matchMonth('Oct')).toBeTruthy();
-//     expect(matchMonth('oct')).toBeTruthy();
-//     expect(matchMonth('October')).toBeTruthy();
-//     expect(matchMonth('october')).toBeTruthy();
-//   });
+describe('Testing challenge 4', () => {
+  test('It should match any of the acceptable inputs', () => {
+    expect(matchMonth('Oct')).toBeTruthy();
+    expect(matchMonth('oct')).toBeTruthy();
+    expect(matchMonth('October')).toBeTruthy();
+    expect(matchMonth('october')).toBeTruthy();
+  });
 
-//   test('It should not match anything other than the acceptable inputs', () => {
-//     expect(matchMonth('November')).toBeFalsy();
-//     expect(matchMonth('nov')).toBeFalsy();
-//     expect(matchMonth(123)).toBeFalsy();
-//     expect(matchMonth('octob')).toBeFalsy();
-//     expect(matchMonth('OCTOBER')).toBeFalsy();
-//     expect(matchMonth('notOctober')).toBeFalsy();
-//   });
-// });
+  test('It should not match anything other than the acceptable inputs', () => {
+    expect(matchMonth('November')).toBeFalsy();
+    expect(matchMonth('nov')).toBeFalsy();
+    expect(matchMonth(123)).toBeFalsy();
+    expect(matchMonth('octob')).toBeFalsy();
+    expect(matchMonth('OCTOBER')).toBeFalsy();
+    expect(matchMonth('notOctober')).toBeFalsy();
+  });
+});
 
 // describe('Testing challenge 5', () => {
 //   const lorem = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras lacinia vel massa sed egestas. Nunc faucibus iaculis elit, a scelerisque enim condimentum sed. Aenean ac scelerisque sem, et pharetra diam.';
@@ -186,9 +198,9 @@ describe('Testing challenge 6', () => {
   });
 });
 
-// describe('Testing challenge 7', () => {
-//   test('It should return an array of instances of "sells", shells", and "seashells"', () => {
-//     expect(findShells(seashells)).toStrictEqual(['sells', 'seashells', 'shells', 'sells', 'seashells', 'sells', 'shells', 'sells', 'shells']);
-//     expect(findShells(seashells).length).toStrictEqual(9);
-//   });
-// });
+describe('Testing challenge 7', () => {
+  test('It should return an array of instances of "sells", shells", and "seashells"', () => {
+    expect(findShells(seashells)).toStrictEqual(['sells', 'seashells', 'shells', 'sells', 'seashells', 'sells', 'shells', 'sells', 'shells']);
+    expect(findShells(seashells).length).toStrictEqual(9);
+  });
+});
