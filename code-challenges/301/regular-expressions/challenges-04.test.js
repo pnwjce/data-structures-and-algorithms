@@ -12,8 +12,8 @@ For example:
 
 const isNum = (input) => {
   // Solution code here...
-  let regex = /\d/;
-  return regex.test(input);
+  let regEx = /\d/;
+  return regEx.test(input);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -24,8 +24,8 @@ Return an array containing all the matches.
 
 const isCapitalized = (str) => {
   // Solution code here...
-  let regex = /[[:upper:]]/;
-  return regex.
+  let regEx1 = /[A-Z]+\w+/g;
+  return str.match(regEx1);
 };
 
 
@@ -36,6 +36,14 @@ Write a function named citiesAtoJ that takes in an array of city names and uses 
 
 const citiesAtoJ = (arr) => {
   // Solution code here...
+  let citiesAtoJArray = [];
+  let regEx2 = /[A-J]+\w+\s?/gy;
+  for (let i = 0; i < arr.length; i ++){
+    if(arr[i].match(regEx2)!== null){
+      citiesAtoJArray.push(arr[i]);
+    }
+  }
+  return citiesAtoJArray;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -48,6 +56,7 @@ Do not use the vertical bar (pipe) in your pattern.
 
 const matchMonth = (input) => {
   // Solution code here...
+  
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -64,13 +73,17 @@ const noPunctuation = str => {
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6
 You want to teach a friend how to play hangman and want to show them using a partially complete puzzle.
-Write a function named hangman which uses the replace method to remove all of the vowels (a, e, i, o, u) from the hangman string and replace them with an underscore. 
+Write a function named hangman which uses the replace method to remove all of the vowels (a, e, i, o, u) from the hangman string and replace them with an underscore.
 The function should return a string containing the consonants in their original positions and underscores where the vowels were previously located.
 For example, 'Welcome to Code 301!' will return 'W_lc_m_ t_ C_d_ 301!'.
 ------------------------------------------------------------------------------------------------ */
 
 let hangman = (str) => {
   // Solution code here...
+  let regEx4 = /[AaEeIiOoUu]/g;
+  str = str.replace(regEx4, '_');
+  console.log(str);
+  return str;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -84,6 +97,7 @@ const seashells = 'She sells seashells by the seashore. The shells she sells are
 
 const findShells = (str) => {
   // Solution code here...
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -116,18 +130,18 @@ describe('Testing challenge 2', () => {
   });
 });
 
-// describe('Testing challenge 3', () => {
-//   let cities = ['Cleveland', 'San Diego', 'Birmingham', 'Seattle', 'Miami', 'New York City', 'Omaha', 'Portland', 'Austin', 'Boston', 'Newport Beach', 'Hoboken'];
+describe('Testing challenge 3', () => {
+  let cities = ['Cleveland', 'San Diego', 'Birmingham', 'Seattle', 'Miami', 'New York City', 'Omaha', 'Portland', 'Austin', 'Boston', 'Newport Beach', 'Hoboken'];
 
-//   test('It should return the cities whose names begin with the letters A through J', () => {
-//     expect(citiesAtoJ(cities)).toContain('Cleveland', 'Birmingham', 'Austin', 'Boston', 'Hoboken');
-//     expect(citiesAtoJ(cities).length).toStrictEqual(5);
-//   });
+  test('It should return the cities whose names begin with the letters A through J', ()=> {
+    expect(citiesAtoJ(cities)).toContain('Cleveland', 'Birmingham', 'Austin', 'Boston', 'Hoboken');
+    expect(citiesAtoJ(cities).length).toStrictEqual(5);
+  });
 
-//   test('It should not return the cities whose names begin with the letters K through Z', () => {
-//     expect(citiesAtoJ(cities)).not.toContain('San Diego', 'Seattle', 'Miami', 'New York City', 'Omaha', 'Portland', 'Newport Beach');
-//   });
-// });
+  test('It should not return the cities whose names begin with the letters K through Z', () => {
+    expect(citiesAtoJ(cities)).not.toContain('San Diego', 'Seattle', 'Miami', 'New York City', 'Omaha', 'Portland', 'Newport Beach');
+  });
+});
 
 // describe('Testing challenge 4', () => {
 //   test('It should match any of the acceptable inputs', () => {
@@ -160,17 +174,17 @@ describe('Testing challenge 2', () => {
 //   });
 // });
 
-// describe('Testing challenge 6', () => {
-//   let startString = 'This is a regex challenge. We are trying to create a hangman phrase where all of the vowels are missing!';
+describe('Testing challenge 6', () => {
+  let startString = 'This is a regex challenge. We are trying to create a hangman phrase where all of the vowels are missing!';
 
-//   test('It should remove the vowels from the hangman string and replace them with underscores', () => {
-//     expect(hangman(startString)).toStrictEqual('Th_s _s _ r_g_x ch_ll_ng_. W_ _r_ try_ng t_ cr__t_ _ h_ngm_n phr_s_ wh_r_ _ll _f th_ v_w_ls _r_ m_ss_ng!');
-//   });
+  test('It should remove the vowels from the hangman string and replace them with underscores', () => {
+    expect(hangman(startString)).toStrictEqual('Th_s _s _ r_g_x ch_ll_ng_. W_ _r_ try_ng t_ cr__t_ _ h_ngm_n phr_s_ wh_r_ _ll _f th_ v_w_ls _r_ m_ss_ng!');
+  });
 
-//   test('It should not contain the letters "a", "e", "i", "o", or "u"', () => {
-//     expect(hangman(startString)).not.toContain('a', 'e', 'i', 'o', 'u');
-//   });
-// });
+  test('It should not contain the letters "a", "e", "i", "o", or "u"', () => {
+    expect(hangman(startString)).not.toContain('a', 'e', 'i', 'o', 'u');
+  });
+});
 
 // describe('Testing challenge 7', () => {
 //   test('It should return an array of instances of "sells", shells", and "seashells"', () => {
