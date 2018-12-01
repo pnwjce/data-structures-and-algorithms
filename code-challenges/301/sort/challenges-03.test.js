@@ -79,6 +79,20 @@ For example, ['Alphabet', 'alphabet', 'carrot', 'Zebra'] is correctly sorted, an
 
 const alphabetizeBetter = (arr) => {
   // Solution code here...
+  function evenIfCaps (a, b){
+    if(a.toLowerCase()<b.toLowerCase()){
+      return -1;
+    }
+    if(a.toLowerCase()>b.toLowerCase()){
+      return 1;
+    }
+    else{
+      return 0;
+    }
+  }
+  arr.sort(evenIfCaps);
+
+  return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -94,6 +108,20 @@ Here is an example of the input:
 
 const sortByPrice = (arr) => {
   // Solution code here...
+  function priceTags (a, b){
+    if(a.price<b.price){
+      return -1;
+    }
+    if(a.price>b.price){
+      return 1;
+    }
+    else{
+      return 0;
+    }
+  }
+  arr.sort(priceTags);
+
+  return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -219,21 +247,21 @@ describe('Testing challenge 4', () => {
   });
 });
 
-// describe('Testing challenge 5', () => {
-//   test('It should sort items by their price', () => {
-//     expect(sortByPrice([
-//       {name: 'Sweatshirt', price: 45},
-//       {name: 'Bookmark', price: 2.50},
-//       {name: 'Tote bag', price: 15}
-//     ])).toStrictEqual([
-//       {name: 'Bookmark', price: 2.50},
-//       {name: 'Tote bag', price: 15},
-//       {name: 'Sweatshirt', price: 45},
-//     ]);
-//     expect(sortByPrice([{price: 12}, {price: 10}])).toStrictEqual([{price: 10}, {price: 12}]);
-//     expect(sortByPrice([])).toStrictEqual([]);
-//   });
-// });
+describe('Testing challenge 5', () => {
+  test('It should sort items by their price', () => {
+    expect(sortByPrice([
+      {name: 'Sweatshirt', price: 45},
+      {name: 'Bookmark', price: 2.50},
+      {name: 'Tote bag', price: 15}
+    ])).toStrictEqual([
+      {name: 'Bookmark', price: 2.50},
+      {name: 'Tote bag', price: 15},
+      {name: 'Sweatshirt', price: 45},
+    ]);
+    expect(sortByPrice([{price: 12}, {price: 10}])).toStrictEqual([{price: 10}, {price: 12}]);
+    expect(sortByPrice([])).toStrictEqual([]);
+  });
+});
 
 // describe('Testing challenge 6', () => {
 //   test('It should sort numbers by their length', () => {
