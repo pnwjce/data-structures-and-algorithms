@@ -56,7 +56,13 @@ Do not use the vertical bar (pipe) in your pattern.
 
 const matchMonth = (input) => {
   // Solution code here...
-  
+  let regEx3 = /[October][Oct][october][oct]/;
+  if(input.match(regEx3)!== null){
+    return true;
+  }
+  else {
+    return false;
+  }
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -98,17 +104,16 @@ const findShells = (str) => {
   // Solution code here...
   let regEx6 = /[.]/g;
   str = str.replace(regEx6, '');
+
   let ellsArray = [];
   let strArray = str.split(' ');
 
-  
   for(let i = 0; i < strArray.length; i++){
     let regEx7 = /[Ee][Ll][Ll][Ss]/;
     if(strArray[i].match(regEx7)!== null){
       ellsArray.push(strArray[i]);
     }
   }
-  console.log(ellsArray);
   return ellsArray;
 };
 
