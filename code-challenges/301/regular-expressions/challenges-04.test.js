@@ -3,7 +3,7 @@
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 1
 Write a function named isNum that takes in a string or number of any length. This function should use a regular expression pattern to return true if the input contains a number, and false if the input does not contain a number.
-For example: 
+For example:
 12345 returns true
 '12345' returns true
 'h3llo world' returns true
@@ -56,7 +56,13 @@ Do not use the vertical bar (pipe) in your pattern.
 
 const matchMonth = (input) => {
   // Solution code here...
-  
+  let regEx3 = /[Oo][Oct][october][oct]/;
+  if(input.match(regEx3)!== null){
+    return true;
+  }
+  else {
+    return false;
+  }
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -68,7 +74,11 @@ The expected output of "Hello, and have a wonderful day!" is ["and ", "have ", "
 
 const noPunctuation = str => {
   // Solution code here...
+  let regEx4 = /\w+\b(?:\s)/g;
+  return str.match(regEx4);
 };
+
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6
@@ -80,9 +90,8 @@ For example, 'Welcome to Code 301!' will return 'W_lc_m_ t_ C_d_ 301!'.
 
 let hangman = (str) => {
   // Solution code here...
-  let regEx4 = /[AaEeIiOoUu]/g;
-  str = str.replace(regEx4, '_');
-  console.log(str);
+  let regEx5 = /[AaEeIiOoUu]/g;
+  str = str.replace(regEx5, '_');
   return str;
 };
 
@@ -97,7 +106,21 @@ const seashells = 'She sells seashells by the seashore. The shells she sells are
 
 const findShells = (str) => {
   // Solution code here...
+  // let regEx6 = /[.]/g;
+  // str = str.replace(regEx6, '');
 
+  // let ellsArray = [];
+  // let strArray = str.split(' ');
+
+  // for(let i = 0; i < strArray.length; i++){
+  //   let regEx7 = /[Ee][Ll][Ll][Ss]/;
+  //   if(strArray[i].match(regEx7)!== null){
+  //     ellsArray.push(strArray[i]);
+  //   }
+  // }
+  // return ellsArray;
+  let regEx7 = /\b(\w*(?:ells))\b/ig;
+  return str.match(regEx7);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -161,18 +184,18 @@ describe('Testing challenge 3', () => {
 //   });
 // });
 
-// describe('Testing challenge 5', () => {
-//   const lorem = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras lacinia vel massa sed egestas. Nunc faucibus iaculis elit, a scelerisque enim condimentum sed. Aenean ac scelerisque sem, et pharetra diam.';
+describe('Testing challenge 5', () => {
+  const lorem = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras lacinia vel massa sed egestas. Nunc faucibus iaculis elit, a scelerisque enim condimentum sed. Aenean ac scelerisque sem, et pharetra diam.';
 
-//   test('It should only return words that are immediately followed by a space', () => {
-//     expect(noPunctuation(lorem)).toStrictEqual([ 'Lorem ', 'ipsum ', 'dolor ', 'sit ', 'consectetur ', 'adipiscing ', 'Cras ', 'lacinia ', 'vel ', 'massa ', 'sed ', 'Nunc ', 'faucibus ', 'iaculis ', 'a ', 'scelerisque ', 'enim ', 'condimentum ', 'Aenean ', 'ac ', 'scelerisque ', 'et ', 'pharetra ' ]);
-//     expect(noPunctuation(lorem).length).toStrictEqual(23);
-//   });
+  test('It should only return words that are immediately followed by a space', () => {
+    expect(noPunctuation(lorem)).toStrictEqual([ 'Lorem ', 'ipsum ', 'dolor ', 'sit ', 'consectetur ', 'adipiscing ', 'Cras ', 'lacinia ', 'vel ', 'massa ', 'sed ', 'Nunc ', 'faucibus ', 'iaculis ', 'a ', 'scelerisque ', 'enim ', 'condimentum ', 'Aenean ', 'ac ', 'scelerisque ', 'et ', 'pharetra ' ]);
+    expect(noPunctuation(lorem).length).toStrictEqual(23);
+  });
 
-//   test('It should not contain words that are followed by any non-space character', () => {
-//     expect(noPunctuation(lorem)).not.toContain(['amet,', 'elit.', 'egestas.', 'elit,', 'sed.', 'sem,', 'diam.', 'nibh.', 'porttitor.', 'euismod,', 'ultrices.', 'massa,', 'vel,', 'purus.', 'purus,', 'odio.', 'aliquet,', 'non,', 'sem.'])
-//   });
-// });
+  test('It should not contain words that are followed by any non-space character', () => {
+    expect(noPunctuation(lorem)).not.toContain(['amet,', 'elit.', 'egestas.', 'elit,', 'sed.', 'sem,', 'diam.', 'nibh.', 'porttitor.', 'euismod,', 'ultrices.', 'massa,', 'vel,', 'purus.', 'purus,', 'odio.', 'aliquet,', 'non,', 'sem.'])
+  });
+});
 
 describe('Testing challenge 6', () => {
   let startString = 'This is a regex challenge. We are trying to create a hangman phrase where all of the vowels are missing!';
@@ -186,9 +209,9 @@ describe('Testing challenge 6', () => {
   });
 });
 
-// describe('Testing challenge 7', () => {
-//   test('It should return an array of instances of "sells", shells", and "seashells"', () => {
-//     expect(findShells(seashells)).toStrictEqual(['sells', 'seashells', 'shells', 'sells', 'seashells', 'sells', 'shells', 'sells', 'shells']);
-//     expect(findShells(seashells).length).toStrictEqual(9);
-//   });
-// });
+describe('Testing challenge 7', () => {
+  test('It should return an array of instances of "sells", shells", and "seashells"', () => {
+    expect(findShells(seashells)).toStrictEqual(['sells', 'seashells', 'shells', 'sells', 'seashells', 'sells', 'shells', 'sells', 'shells']);
+    expect(findShells(seashells).length).toStrictEqual(9);
+  });
+});
