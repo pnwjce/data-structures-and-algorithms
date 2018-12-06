@@ -70,10 +70,11 @@ const gruffaloCrumble = {
 const listFoods = (recipe) => {
   let result = [];
   // Solution code here...
-  // for(let i = 0; i < recipe[i]; i++){
-  //   result.push(recipe.slice(recipe.ingredients.indexOf(' ')));
-  // }
-  // return result;
+  for(let i = 0; i < recipe.ingredients.length; i++){
+    let ingredient = recipe.ingredients[i];
+    result.push(ingredient.slice(ingredient.indexOf(' ', 3)).slice(1));
+  }
+  return result;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -99,6 +100,9 @@ Return a new array containing just the verbs. For example, ['Mix until evenly di
 const stepActions = (recipe) => {
   let result = [];
   // Solution code here...
+  for(let i = 0; i < recipe.steps.length; i++){
+    result.push(recipe.steps[i].slice(0, recipe.steps[i].indexOf(' ', 0)));
+  }
   return result;
 };
 
@@ -116,7 +120,8 @@ const removeEvenValues = (arr) => {
   // Solution code here...
   for(let i = 0; i < arr.length; i++){
     if(i % 2 === 1){
-      arr[i].slice();
+      arr = arr.slice([i]);
+      console.log(arr);
     }
   }
 };
@@ -154,6 +159,7 @@ Write a function named totalSumCSV that, given a string of comma-separated value
 const totalSumCSV = (str) => {
   let total = 0;
   // Solution code here...
+  
   return total;
 };
 
@@ -221,12 +227,12 @@ describe('Testing challenge 3', () => {
 //   });
 // });
 
-// describe('Testing challenge 5', () => {
-//   test('It should return a list of recipe steps', () => {
-//     expect(stepActions(gruffaloCrumble)).toStrictEqual(['Pre-heat', 'De-prickle', 'Sprinkle', 'Mix', 'Grease', 'Combine', 'Fold', 'Spread', 'Bake']);
-//     expect(stepActions(gruffaloCrumble).length).toStrictEqual(9);
-//   });
-// });
+describe('Testing challenge 5', () => {
+  test('It should return a list of recipe steps', () => {
+    expect(stepActions(gruffaloCrumble)).toStrictEqual(['Pre-heat', 'De-prickle', 'Sprinkle', 'Mix', 'Grease', 'Combine', 'Fold', 'Spread', 'Bake']);
+    expect(stepActions(gruffaloCrumble).length).toStrictEqual(9);
+  });
+});
 
 describe('Testing challenge 6', () => {
   test('It should remove the even numbers from the array', () => {
