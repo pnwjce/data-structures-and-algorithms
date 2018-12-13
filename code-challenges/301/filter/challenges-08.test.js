@@ -8,6 +8,7 @@ For example, oddValues([1,2,3]) returns [1,3].
 
 const oddValues = (arr) => {
   // Solution code here...
+  return arr.filter(n => (n%2));
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -20,6 +21,8 @@ For example, filterStringsWithVowels('gregor','hound','xyz') returns ['gregor', 
 
 const filterStringsWithVowels = (arr) => {
   // Solution code here...
+  let regEx = /[AaEeIiOoUu]/;
+  return arr.filter(n => regEx.test(n));
 };
 
 
@@ -31,6 +34,7 @@ For example, notInFirstArray([1,2,3], [1,2,3,4]) returns [4].
 
 const notInFirstArray = (forbiddenValues, arr) => {
   // Solution code here...
+  return arr.filter(n => !forbiddenValues.includes(n));
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -72,6 +76,7 @@ const snorlaxData = {
 
 const getBaseStatGreaterThan = (arr, minBaseStat) => {
   // Solution code here...
+  return arr.filter(n => n.baseStat>minBaseStat);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -82,6 +87,15 @@ For example, getStatName(snorlaxData.stats, 50) will return ['special-defense', 
 
 const getStatName = (arr, minBaseStat) => {
   // Solution code here...
+  const solved = [];
+  let names = arr.filter(n => n.baseStat>minBaseStat);
+
+  for(let i in names){
+    let name = names[i].stat.name;
+    solved.push(name);
+  }
+
+  return solved;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -134,6 +148,7 @@ const characters = [
 
 const getCharactersWithoutChildren = (arr) => {
   // Solution code here...
+  return arr.filter(n => n.children===undefined);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -172,7 +187,7 @@ describe('Testing challenge 2', () => {
 
   test('It should not contain any words that do not contain vowels', () => {
     expect(filterStringsWithVowels(['gregor','hound','xyz'])).not.toContain('xyz');
-  })
+  });
 });
 
 describe('Testing challenge 3', () => {
