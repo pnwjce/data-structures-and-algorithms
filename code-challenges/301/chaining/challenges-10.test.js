@@ -61,13 +61,21 @@ const divisibleByFiveTwoToThePower = (input) => {
   });
   let divByFive = numArray.map(arr => {
     return arr.filter(n => {
-      
-      if(n%5===1){
+
+      if(n%5===0){
         return n;
       }
     });
   });
-  console.log('divByFive', divByFive);
+  
+  let results = divByFive.map(arr => {
+    let toTheTwo = [];
+    for(let i in arr){
+      toTheTwo.push(Math.pow(2, arr[i]));
+    }
+    return toTheTwo;
+  });
+  console.log('results', results);
 };
 
 
@@ -128,11 +136,11 @@ let starWarsData = [{
   eye_color: 'brown',
   birth_year: '19BBY',
   gender: 'female'
-}]
+}];
 
 let findMaleAndFemale = (data) => {
   // Solution code here...
-}
+};
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5
@@ -141,7 +149,7 @@ Write a function named findShortest that, given the Star Wars data from Challeng
 
 let findShortest = (data) => {
   // Solution code here...
-}
+};
 
 /* ------------------------------------------------------------------------------------------------
 TESTS
@@ -159,7 +167,7 @@ describe('Testing challenge 1', () => {
   test('It should work on empty arrays', () => {
     expect(count(5, [[1, 3, 5, 7, 9], [], [5, 5, 5], [1, 2, 3], []])).toStrictEqual(4);
     expect(count(5, [])).toStrictEqual(0);
-  })
+  });
 });
 
 describe('Testing challenge 2', () => {
