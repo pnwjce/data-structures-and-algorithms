@@ -157,6 +157,10 @@ Hint: The accumulator should begin as { count: 0, sum: 0 }
 
 const calculateAverage = (arr) => {
   // Solution code here...
+  let total =  arr.reduce((acc, val, idx) => {
+    return acc + val;
+  }, 0);
+  return total/arr.length;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -176,7 +180,8 @@ const isPrime = (value) => {
 
 const countPrimeNumbers = (arr) => {
   // Solution code here...
-}
+
+};
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 7 - Stretch Goal
@@ -262,11 +267,11 @@ describe('Testing challenge 4', () => {
   });
 });
 
-// describe('Testing challenge 5', () => {
-//   test('It should return the average of the numbers in the array', () => {
-//     expect(calculateAverage([18, 290, 37, 4, 55, 16, 7, 85 ])).toStrictEqual(64);
-//   });
-// });
+describe('Testing challenge 5', () => {
+  test('It should return the average of the numbers in the array', () => {
+    expect(calculateAverage([18, 290, 37, 4, 55, 16, 7, 85 ])).toStrictEqual(64);
+  });
+});
 
 // describe('Testing challenge 6', () => {
 //   test('It should return a count of the prime numbers in the array', () => {
