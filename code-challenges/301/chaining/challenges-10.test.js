@@ -56,8 +56,11 @@ For example, [ [0,2,5,4], [2,4,10], [] ] should return [ [1, 32], [1024], [] ].
 const divisibleByFiveTwoToThePower = (input) => {
   // Solution code here...
   let numArray = input.map(arr => {
-    let regEx = /[0-9]/;
-    return arr.filter(n => regEx.test(n));
+    return arr.filter(n => {
+      if(typeof n === "number"){
+        return n;
+      }
+    });
   });
   let divByFive = numArray.map(arr => {
     return arr.filter(n => {
@@ -68,17 +71,16 @@ const divisibleByFiveTwoToThePower = (input) => {
     });
   });
   
-  let results = divByFive.map(arr => {
+  return divByFive.map(arr => {
     let toTheTwo = [];
     for(let i in arr){
       toTheTwo.push(Math.pow(2, arr[i]));
     }
     return toTheTwo;
   });
-  console.log('results', results);
 };
 
-
+""
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
 Write a function named findMaleAndFemale that, given the Star Wars data, below,
@@ -140,6 +142,19 @@ let starWarsData = [{
 
 let findMaleAndFemale = (data) => {
   // Solution code here...
+  let namesArray = data.reduce((acc, val)=> {
+    console.log('val.gender', val.gender);
+  
+    if(val.gender === 'female' || 'male'){
+      acc.push(val.name);
+      return acc;
+    }else{ return acc;}
+  }, []);
+  console.log('namesArray', namesArray);
+  // let newNames = namesArray.toString();
+  // console.log('newNames', newNames);
+  // let regEx = /[,]/g;
+  // return newNames.replace(regEx, ' and ');
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -192,12 +207,12 @@ describe('Testing challenge 3', () => {
   });
 });
 
-// describe('Testing challenge 4', () => {
-//   test('It should return only characters that are male or female', () => {
-//     expect(findMaleAndFemale(starWarsData)).toStrictEqual('Luke Skywalker and Darth Vader and Leia Organa');
-//     expect(findMaleAndFemale([{ name: 'person', gender: 'female' }, { gender: 'lol' }, { name: 'persontwo', gender: 'male' }])).toStrictEqual('person and persontwo');
-//   });
-// });
+describe('Testing challenge 4', () => {
+  test('It should return only characters that are male or female', () => {
+    expect(findMaleAndFemale(starWarsData)).toStrictEqual('Luke Skywalker and Darth Vader and Leia Organa');
+    expect(findMaleAndFemale([{ name: 'person', gender: 'female' }, { gender: 'lol' }, { name: 'persontwo', gender: 'male' }])).toStrictEqual('person and persontwo');
+  });
+});
 
 // describe('Testing challenge 5', () => {
 //   test('It should return the name of the shortest character', () => {
