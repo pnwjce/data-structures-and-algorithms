@@ -57,7 +57,7 @@ const divisibleByFiveTwoToThePower = (input) => {
   // Solution code here...
   let numArray = input.map(arr => {
     return arr.filter(n => {
-      if(typeof n === "number"){
+      if(typeof n === 'number'){
         return n;
       }
     });
@@ -70,7 +70,7 @@ const divisibleByFiveTwoToThePower = (input) => {
       }
     });
   });
-  
+
   return divByFive.map(arr => {
     let toTheTwo = [];
     for(let i in arr){
@@ -80,7 +80,7 @@ const divisibleByFiveTwoToThePower = (input) => {
   });
 };
 
-""
+'';
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
 Write a function named findMaleAndFemale that, given the Star Wars data, below,
@@ -142,15 +142,26 @@ let starWarsData = [{
 
 let findMaleAndFemale = (data) => {
   // Solution code here...
-  let namesArray = data.reduce((acc, val)=> {
-    console.log('val.gender', val.gender);
-  
-    if(val.gender === 'female' || 'male'){
+  //help from Rick and Nikki
+  let names = data.reduce((acc, val) => {
+    console.log(val.gender);
+    if(val.gender === 'n/a'){
+      return acc;
+    }else if(!val.name){
+      return acc;
+    }else{
       acc.push(val.name);
       return acc;
-    }else{ return acc;}
+    }
   }, []);
-  console.log('namesArray', namesArray);
+  return names.join(' and ');
+  // let namesArray = data.reduce((acc, val)=> {
+  //   if(val.gender !== 'n/a'){
+  //     acc.push(val.name);
+  //     return acc;
+  //   }
+  // }, []);
+  // console.log('namesArray', namesArray);
   // let newNames = namesArray.toString();
   // console.log('newNames', newNames);
   // let regEx = /[,]/g;
