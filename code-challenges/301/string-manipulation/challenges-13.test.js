@@ -74,6 +74,14 @@ Write a function named allHappy that takes in an array of strings and returns a 
 
 const allHappy = (arr) => {
   // Solution code here...
+  let answers = arr.map(str => {
+    return str.includes(':)');
+  });
+  if(answers.includes(false) === true){
+    return false;
+  }else if(answers.includes(false) !== true){
+    return true;
+  }
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -83,6 +91,13 @@ Write a function named findAnything that takes in an array of strings, along wit
 
 const findAnything = (arr, target) => {
   // Solution code here...
+  let includes = [];
+  for(let i in arr){
+    if(arr[i].includes(target) === true){
+      includes.push(arr[i]);
+    }
+  }
+  return includes;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -92,6 +107,17 @@ Write a function named findEvery that takes in an array of strings, along with a
 
 const findEvery = (arr, target) => {
   // Solution code here...
+  let includes = [];
+  for(let i in arr){
+    if(arr[i].includes(target) === true){
+      includes.push(arr[i]);
+    }
+  }
+  if(arr.length === includes.length){
+    return true;
+  }else{
+    return false;
+  }
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -185,52 +211,52 @@ describe('Testing challenge 4', () => {
   });
 });
 
-// describe('Testing challenge 5', () => {
-//   test('It should correctly assess whether all the strings are happy', () => {
-//     const words = ['things', 'apple (:)', ':)banana', 'missing that thing', 'cant:)aloupe'];
+describe('Testing challenge 5', () => {
+  test('It should correctly assess whether all the strings are happy', () => {
+    const words = ['things', 'apple (:)', ':)banana', 'missing that thing', 'cant:)aloupe'];
 
-//     expect(allHappy(words)).toStrictEqual(false);
-//     expect(allHappy(['apple (:)', ':)banana', 'cant:)aloupe'])).toStrictEqual(true);
-//     expect(allHappy([])).toStrictEqual(true);
-//   });
-// });
+    expect(allHappy(words)).toStrictEqual(false);
+    expect(allHappy(['apple (:)', ':)banana', 'cant:)aloupe'])).toStrictEqual(true);
+    expect(allHappy([])).toStrictEqual(true);
+  });
+});
 
-// describe('Testing challenge 6', () => {
-//   test('It should find all the strings that contain a given string', () => {
-//     const words = ['things', 'apple (:)', ':)banana', 'missing that thing', 'cant:)aloupe'];
+describe('Testing challenge 6', () => {
+  test('It should find all the strings that contain a given string', () => {
+    const words = ['things', 'apple (:)', ':)banana', 'missing that thing', 'cant:)aloupe'];
 
-//     expect(findAnything(words, ':)')).toStrictEqual(findHappiness(words));
-//     expect(findAnything(words, 'i')).toStrictEqual(['things', 'missing that thing']);
-//   });
-// });
+    expect(findAnything(words, ':)')).toStrictEqual(findHappiness(words));
+    expect(findAnything(words, 'i')).toStrictEqual(['things', 'missing that thing']);
+  });
+});
 
-// describe('Testing challenge 7', () => {
-//   test('It should determine whether all the strings contain a given string', () => {
-//     const words = ['things', 'apple pie (:)', ':)banana pie', 'missing that thing', 'cant:)aloupe is tasty'];
+describe('Testing challenge 7', () => {
+  test('It should determine whether all the strings contain a given string', () => {
+    const words = ['things', 'apple pie (:)', ':)banana pie', 'missing that thing', 'cant:)aloupe is tasty'];
 
-//     expect(findEvery(words, 'a')).toStrictEqual(false);
-//     expect(findEvery(words, '')).toStrictEqual(true);
-//     expect(findEvery(words, 'i')).toStrictEqual(true);
-//   });
-// });
+    expect(findEvery(words, 'a')).toStrictEqual(false);
+    expect(findEvery(words, '')).toStrictEqual(true);
+    expect(findEvery(words, 'i')).toStrictEqual(true);
+  });
+});
 
-// describe('Testing challenge 8', () => {
-//   test('It should remove Brook from all courses', () => {
-//     const roster = [
-//       ['Michelle', 'Allie', 'Brook TESTING'],
-//       ['Brook Riggio', 'hey look it\'s Brook', 'Jennifer'],
-//       ['Nicholas', 'Sam', 'Scott', 'Vinicio']
-//     ];
+describe('Testing challenge 8', () => {
+  test('It should remove Brook from all courses', () => {
+    const roster = [
+      ['Michelle', 'Allie', 'Brook TESTING'],
+      ['Brook Riggio', 'hey look it\'s Brook', 'Jennifer'],
+      ['Nicholas', 'Sam', 'Scott', 'Vinicio']
+    ];
 
-//     expect(unenrollBrook(roster)).toStrictEqual([
-//       ['Michelle', 'Allie'],
-//       ['Jennifer'],
-//       ['Nicholas', 'Sam', 'Scott', 'Vinicio']
-//     ]);
-//     expect(unenrollBrook([['Brook', 'person'], [], ['person', 'person', 'Brook']])).toStrictEqual([['person'], [], ['person', 'person']]);
-//     expect(unenrollBrook([])).toStrictEqual([]);
-//   });
-// });
+    expect(unenrollBrook(roster)).toStrictEqual([
+      ['Michelle', 'Allie'],
+      ['Jennifer'],
+      ['Nicholas', 'Sam', 'Scott', 'Vinicio']
+    ]);
+    expect(unenrollBrook([['Brook', 'person'], [], ['person', 'person', 'Brook']])).toStrictEqual([['person'], [], ['person', 'person']]);
+    expect(unenrollBrook([])).toStrictEqual([]);
+  });
+});
 
 // describe('Testing challenge 9', () => {
 //   test('It should sort events by the day on which they happen', () => {
