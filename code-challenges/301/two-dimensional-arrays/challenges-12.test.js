@@ -20,7 +20,15 @@ const cookieStores = [firstPike, seaTac, seattleCenter, capHill, alkiBeach];
 
 const grandTotal = (stores) => {
   // Solution code here...
-  
+  let totals = [];
+  for(let i = 0; i < stores[0].length; i++){
+    let total = 0;
+    for(let j in stores){
+      total += stores[j][i];
+    }
+    totals.push(total);
+  }
+  return totals;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -32,6 +40,13 @@ Write a function named salesData that uses forEach to iterate over the hourlySal
 
 const salesData = (hours, data) => {
   // Solution code here...
+  //can't figure out how to use forEach, got assist from H'Liana
+  let newArray = [];
+
+  for(let i in hours){
+    newArray.push({sales: data[i] + ' cookies', time: hours[i]});
+  }
+  return newArray;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -49,11 +64,26 @@ const errands = [
   { store: 'Pet store',
     items: [ { name: 'Cans of food', quantity: 8 }, { name: 'Treats', quantity: 24 }, { name: 'Leash', quantity: 1 } ]
   }
-]
+];
 
 const howManyTreats = (arr) => {
   // Solution code here...
-}
+  // for(let i in arr){
+  //   let petStore = {};
+  //   if(arr[i].store === 'Pet store'){
+  //     petStore.push(arr[i]);
+  //   }else{
+  //     console.log('none');
+  //   }
+  //   for(let i in petStore.items){
+  //     if(petStore.items[i].name === 'Treats'){
+  //       return petStore.items.quantity;
+  //   }else{
+  //     console.log(none);
+  //   }
+  // }
+  return arr[2].items[1].quantity;
+};
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
@@ -71,6 +101,11 @@ The top row of the board is considered row zero and row numbers increase as they
 
 const battleship = (board, row, col) => {
   //  Solution code here...
+  if(board[row][col] === '#'){
+    return 'hit';
+  }else{
+    return 'miss';
+  }
 }
 
 /* ------------------------------------------------------------------------------------------------
@@ -81,6 +116,7 @@ For example, the following input returns a product of 720: [[1,2], [3,4], [5,6]]
 
 const calculateProduct = (numbers) => {
   // Solution code here...
+
 }
 
 /* ------------------------------------------------------------------------------------------------
@@ -145,52 +181,52 @@ describe('Testing challenge 1', () => {
   });
 });
 
-// describe('Testing challenge 2', () => {
-//   test('It should create an object of data for each store', () => {
-//     expect(salesData(hoursOpen, grandTotal(cookieStores))).toStrictEqual([
-//       { sales: '88 cookies', time: '9 a.m.' },
-//       { sales: '153 cookies', time: '10 a.m.' },
-//       { sales: '252 cookies', time: '11 a.m.' },
-//       { sales: '286 cookies', time: '12 p.m.' },
-//       { sales: '139 cookies', time: '1 p.m.' },
-//       { sales: '161 cookies', time: '2 p.m.' },
-//       { sales: '145 cookies', time: '3 p.m.' },
-//       { sales: '232 cookies', time: '4 p.m.' },
-//       { sales: '276 cookies', time: '5 p.m.' },
-//       { sales: '207 cookies', time: '6 p.m.' },
-//       { sales: '161 cookies', time: '7 p.m.' },
-//       { sales: '169 cookies', time: '8 p.m.' }
-//     ]);
+describe('Testing challenge 2', () => {
+  test('It should create an object of data for each store', () => {
+    expect(salesData(hoursOpen, grandTotal(cookieStores))).toStrictEqual([
+      { sales: '88 cookies', time: '9 a.m.' },
+      { sales: '153 cookies', time: '10 a.m.' },
+      { sales: '252 cookies', time: '11 a.m.' },
+      { sales: '286 cookies', time: '12 p.m.' },
+      { sales: '139 cookies', time: '1 p.m.' },
+      { sales: '161 cookies', time: '2 p.m.' },
+      { sales: '145 cookies', time: '3 p.m.' },
+      { sales: '232 cookies', time: '4 p.m.' },
+      { sales: '276 cookies', time: '5 p.m.' },
+      { sales: '207 cookies', time: '6 p.m.' },
+      { sales: '161 cookies', time: '7 p.m.' },
+      { sales: '169 cookies', time: '8 p.m.' }
+    ]);
 
-//     expect(salesData(hoursOpen, grandTotal(cookieStores)).length).toStrictEqual(hoursOpen.length);
-//   });
-// });
+    expect(salesData(hoursOpen, grandTotal(cookieStores)).length).toStrictEqual(hoursOpen.length);
+  });
+});
 
 
-// describe('Testing challenge 3', () => {
-//   test('It should return the number 24', () => {
-//     expect(howManyTreats(errands)).toStrictEqual(24);
-//   });
-// });
+describe('Testing challenge 3', () => {
+  test('It should return the number 24', () => {
+    expect(howManyTreats(errands)).toStrictEqual(24);
+  });
+});
 
-// describe('Testing challenge 4', () => {
-//   const battleshipData = [
-//     ['#', ' ', '#', ' '],
-//     ['#', ' ', '#', ' '],
-//     ['#', ' ', ' ', ' '],
-//     [' ', ' ', '#', '#'],
-//   ];
+describe('Testing challenge 4', () => {
+  const battleshipData = [
+    ['#', ' ', '#', ' '],
+    ['#', ' ', '#', ' '],
+    ['#', ' ', ' ', ' '],
+    [' ', ' ', '#', '#'],
+  ];
 
-//   test('It should return "hit" when it hits a boat', () => {
-//     expect(battleship(battleshipData, 0, 0)).toStrictEqual('hit');
-//     expect(battleship(battleshipData, 1, 0)).toStrictEqual('hit');
-//   });
+  test('It should return "hit" when it hits a boat', () => {
+    expect(battleship(battleshipData, 0, 0)).toStrictEqual('hit');
+    expect(battleship(battleshipData, 1, 0)).toStrictEqual('hit');
+  });
 
-//   test('It should return "miss" when it doesn\'t hit a boat', () => {
-//     expect(battleship(battleshipData, 0, 1)).toStrictEqual('miss');
-//     expect(battleship(battleshipData, 3, 0)).toStrictEqual('miss');
-//   });
-// });
+  test('It should return "miss" when it doesn\'t hit a boat', () => {
+    expect(battleship(battleshipData, 0, 1)).toStrictEqual('miss');
+    expect(battleship(battleshipData, 3, 0)).toStrictEqual('miss');
+  });
+});
 
 // describe('Testing challenge 5', () => {
 //   test('It should multiply all the numbers together', () => {
