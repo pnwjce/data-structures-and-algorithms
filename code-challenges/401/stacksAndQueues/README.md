@@ -6,5 +6,5 @@
 ### Author: Jessica Elliott
 
 ### Links and Resources
-* [repo](https://github.com/pnwjce/401-Lab-09)
-* [travis](https://travis-ci.com/pnwjce/401-Lab-09)
+* [repo](https://github.com/pnwjce/)
+* [travis](https://travis-ci.com/pnwjce/)
