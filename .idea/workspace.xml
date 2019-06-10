@@ -2,7 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="226eea5e-0287-417c-a044-1b2d48f8fae0" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/code-challenges/401/stacksAndQueues/.idea/workspace.xml" beforeDir="false" />
+
+      <change beforePath="$PROJECT_DIR$/code-challenges/401/ll-insertions/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/code-challenges/401/ll-insertions/linked-list.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code-challenges/401/stacksAndQueues/.eslintrc" beforeDir="false" afterPath="$PROJECT_DIR$/code-challenges/401/stacksAndQueues/.eslintrc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code-challenges/401/stacksAndQueues/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/code-challenges/401/stacksAndQueues/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code-challenges/401/stacksAndQueues/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/code-challenges/401/stacksAndQueues/package.json" afterDir="false" />
+
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -15,19 +20,32 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
+
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/code-challenges/401/ll-insertions/linked-list.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="357">
+              <caret line="58" column="35" selection-start-line="58" selection-start-column="35" selection-end-line="58" selection-end-column="35" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/code-challenges/401/code-tree/tree.js">
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/code-challenges/401/kth-from-the-end/kth-ll.js">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/code-challenges/401/ll-insertions/index.js">
-          <provider selected="true" editor-type-id="text-editor" />
+        <entry file="file://$PROJECT_DIR$/code-challenges/401/ll-insertions/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="30">
+                <caret line="2" column="2" selection-start-line="2" selection-start-column="2" selection-end-line="2" selection-end-column="2" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+
         </entry>
       </file>
     </leaf>
@@ -96,6 +114,22 @@
               <item name="data-structures-and-algorithms" type="462c0819:PsiDirectoryNode" />
               <item name="code-challenges" type="462c0819:PsiDirectoryNode" />
               <item name="401" type="462c0819:PsiDirectoryNode" />
+
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="data-structures-and-algorithms" type="b2602c69:ProjectViewProjectNode" />
+              <item name="data-structures-and-algorithms" type="462c0819:PsiDirectoryNode" />
+              <item name="code-challenges" type="462c0819:PsiDirectoryNode" />
+              <item name="401" type="462c0819:PsiDirectoryNode" />
+              <item name="code-tree" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="data-structures-and-algorithms" type="b2602c69:ProjectViewProjectNode" />
+              <item name="data-structures-and-algorithms" type="462c0819:PsiDirectoryNode" />
+              <item name="code-challenges" type="462c0819:PsiDirectoryNode" />
+              <item name="401" type="462c0819:PsiDirectoryNode" />
+
               <item name="ll-insertions" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -114,7 +148,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -142,25 +176,32 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1560182231112</updated>
-      <workItem from="1560182234184" duration="3156000" />
+
+      <workItem from="1560182234184" duration="2392000" />
+
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3156000" />
+
+    <option name="totallyTimeSpent" value="2392000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="13" y="46" width="1224" height="689" extended-state="0" />
+    <editor active="true" />
+
     <layout>
       <window_info id="Favorites" side_tool="true" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24937028" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" />
-      <window_info active="true" anchor="bottom" id="Terminal" visible="true" weight="0.32924694" />
+
+      <window_info anchor="bottom" id="Terminal" weight="0.32924694" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32924694" />
+      <window_info anchor="bottom" id="Find" order="1" />
+
       <window_info anchor="bottom" id="Run" order="2" weight="0.32924694" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -235,21 +276,18 @@
         </state>
       </provider>
     </entry>
+
+    <entry file="file://$PROJECT_DIR$/code-challenges/401/code-tree/tree.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/code-challenges/401/ll-insertions/linked-list.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="169">
+        <state relative-caret-position="357">
+
           <caret line="58" column="35" selection-start-line="58" selection-start-column="35" selection-end-line="58" selection-end-column="35" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/code-challenges/401/code-tree/tree.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code-challenges/401/kth-from-the-end/kth-ll.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code-challenges/401/ll-insertions/index.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+
   </component>
 </project>
