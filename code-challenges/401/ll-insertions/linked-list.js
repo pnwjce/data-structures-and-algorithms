@@ -12,7 +12,6 @@ class Node {
 class LinkedList {
 
     constructor () {
-
         this.head = null;
     }
 
@@ -28,7 +27,7 @@ class LinkedList {
 
     insertBefore (value, newVal) {
 
-        const newNode = new Node(newVal);
+        let newNode = new Node(newVal);
 
         let current = this.head;
 
@@ -45,7 +44,7 @@ class LinkedList {
 
     insertAfter (value, newVal) {
 
-        const newNode = new Node(value);
+        let newNode = new Node(value);
 
         let current = this.head;
 
@@ -61,3 +60,5 @@ class LinkedList {
 
     }
 }
+
+modules.exports = { Node, LinkedList };
