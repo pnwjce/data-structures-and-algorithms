@@ -2,9 +2,9 @@
   "name": "",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "linked-list.js",
   "scripts": {
-    "start": "node index.js",
+    "start": "node linked-list.js",
     "lint": "eslint **/*.js",
     "jsdoc": "jsdoc -c ./docs/config/jsdoc.config.json",
     "test": "jest --verbose",
