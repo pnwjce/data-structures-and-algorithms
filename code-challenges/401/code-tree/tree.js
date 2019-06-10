@@ -10,7 +10,7 @@ class Node {
 
 }
 
-class Tree {
+class BinaryTree {
 
     constructor () {
         this.root = null;
@@ -92,4 +92,5 @@ class Tree {
     }
 
 }
+
 
