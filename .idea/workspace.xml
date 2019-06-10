@@ -3,9 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="226eea5e-0287-417c-a044-1b2d48f8fae0" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code-challenges/401/kth-from-the-end/__test__/kth-ll.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/code-challenges/401/kth-from-the-end/__test__/kth-ll.test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code-challenges/401/kth-from-the-end/kth-ll.js" beforeDir="false" afterPath="$PROJECT_DIR$/code-challenges/401/kth-from-the-end/kth-ll.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code-challenges/401/stacksAndQueues/__tests__/stacks-and-queues.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/code-challenges/401/stacksAndQueues/__test__/stacks-and-queues.test.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -18,81 +15,25 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/code-challenges/401/ll-insertions/.eslintrc">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret selection-end-line="19" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/code-challenges/401/ll-merge/.eslintrc">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="19" column="1" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/code-challenges/401/ll-insertions/.gitignore">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret selection-end-line="101" selection-end-column="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/code-challenges/401/ll-merge/.gitignore">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="319">
-              <caret line="101" column="18" selection-start-line="101" selection-start-column="18" selection-end-line="101" selection-end-column="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/code-challenges/401/ll-insertions/package.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret selection-end-line="32" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/code-challenges/401/ll-merge/package.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="32" column="1" selection-start-line="32" selection-start-column="1" selection-end-line="32" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/code-challenges/401/ll-merge/ll-merge.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="244">
-              <caret line="47" selection-start-line="47" selection-end-line="47" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/code-challenges/401/kth-from-the-end/kth-ll.js">
+        <entry file="file://$PROJECT_DIR$/code-challenges/401/FizzBuzzTree/fizzBuzzTree.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="214">
-              <caret line="38" lean-forward="true" selection-end-line="38" />
+              <caret line="109" column="4" selection-start-line="109" selection-start-column="4" selection-end-line="109" selection-end-column="4" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/code-challenges/401/kth-from-the-end/__test__/kth-ll.test.js">
-          <provider selected="true" editor-type-id="text-editor" />
+        <entry file="file://$PROJECT_DIR$/code-challenges/401/FizzBuzzTree/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="210">
+                <caret line="14" column="135" selection-start-line="14" selection-start-column="135" selection-end-line="14" selection-end-column="135" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
         </entry>
       </file>
     </leaf>
@@ -121,6 +62,11 @@
         <option value="$PROJECT_DIR$/code-challenges/401/kth-from-the-end/kth-ll.js" />
         <option value="$PROJECT_DIR$/code-challenges/401/kth-from-the-end/__test__/kth-ll.test.js" />
         <option value="$PROJECT_DIR$/code-challenges/401/ll-merge/ll-merge.js" />
+        <option value="$PROJECT_DIR$/code-challenges/401/FizzBuzzTree/.eslintrc" />
+        <option value="$PROJECT_DIR$/code-challenges/401/FizzBuzzTree/.gitignore" />
+        <option value="$PROJECT_DIR$/code-challenges/401/FizzBuzzTree/package.json" />
+        <option value="$PROJECT_DIR$/code-challenges/401/FizzBuzzTree/README.md" />
+        <option value="$PROJECT_DIR$/code-challenges/401/FizzBuzzTree/fizzBuzzTree.js" />
       </list>
     </option>
   </component>
@@ -179,7 +125,7 @@
               <item name="data-structures-and-algorithms" type="462c0819:PsiDirectoryNode" />
               <item name="code-challenges" type="462c0819:PsiDirectoryNode" />
               <item name="401" type="462c0819:PsiDirectoryNode" />
-              <item name="code-tree" type="462c0819:PsiDirectoryNode" />
+              <item name="FizzBuzzTree" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="data-structures-and-algorithms" type="b2602c69:ProjectViewProjectNode" />
@@ -187,14 +133,6 @@
               <item name="code-challenges" type="462c0819:PsiDirectoryNode" />
               <item name="401" type="462c0819:PsiDirectoryNode" />
               <item name="kth-from-the-end" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="data-structures-and-algorithms" type="b2602c69:ProjectViewProjectNode" />
-              <item name="data-structures-and-algorithms" type="462c0819:PsiDirectoryNode" />
-              <item name="code-challenges" type="462c0819:PsiDirectoryNode" />
-              <item name="401" type="462c0819:PsiDirectoryNode" />
-              <item name="kth-from-the-end" type="462c0819:PsiDirectoryNode" />
-              <item name="__test__" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="data-structures-and-algorithms" type="b2602c69:ProjectViewProjectNode" />
@@ -202,28 +140,6 @@
               <item name="code-challenges" type="462c0819:PsiDirectoryNode" />
               <item name="401" type="462c0819:PsiDirectoryNode" />
               <item name="ll-insertions" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="data-structures-and-algorithms" type="b2602c69:ProjectViewProjectNode" />
-              <item name="data-structures-and-algorithms" type="462c0819:PsiDirectoryNode" />
-              <item name="code-challenges" type="462c0819:PsiDirectoryNode" />
-              <item name="401" type="462c0819:PsiDirectoryNode" />
-              <item name="ll-merge" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="data-structures-and-algorithms" type="b2602c69:ProjectViewProjectNode" />
-              <item name="data-structures-and-algorithms" type="462c0819:PsiDirectoryNode" />
-              <item name="code-challenges" type="462c0819:PsiDirectoryNode" />
-              <item name="401" type="462c0819:PsiDirectoryNode" />
-              <item name="ll-merge" type="462c0819:PsiDirectoryNode" />
-              <item name="__test__" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="data-structures-and-algorithms" type="b2602c69:ProjectViewProjectNode" />
-              <item name="data-structures-and-algorithms" type="462c0819:PsiDirectoryNode" />
-              <item name="code-challenges" type="462c0819:PsiDirectoryNode" />
-              <item name="401" type="462c0819:PsiDirectoryNode" />
-              <item name="stacksAndQueues" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -267,7 +183,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5021000" />
+    <option name="totallyTimeSpent" value="6566000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="13" y="46" width="1224" height="689" extended-state="0" />
@@ -344,30 +260,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/code-challenges/401/code-tree/tree.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code-challenges/401/kth-from-the-end/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="319">
-          <caret line="101" column="18" selection-start-line="101" selection-start-column="18" selection-end-line="101" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code-challenges/401/kth-from-the-end/.eslintrc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="1" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code-challenges/401/kth-from-the-end/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="402">
-          <caret line="32" column="1" selection-start-line="32" selection-start-column="1" selection-end-line="32" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/code-challenges/401/stacksAndQueues/stacks-and-queues.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
@@ -379,16 +271,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="97">
           <caret line="17" column="4" selection-start-line="17" selection-start-column="4" selection-end-line="25" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code-challenges/401/kth-from-the-end/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="135">
-            <caret line="9" column="44" selection-start-line="9" selection-start-column="44" selection-end-line="9" selection-end-column="44" />
-          </first_editor>
-          <second_editor />
         </state>
       </provider>
     </entry>
@@ -462,15 +344,92 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/code-challenges/401/kth-from-the-end/kth-ll.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="214">
-          <caret line="38" lean-forward="true" selection-end-line="38" />
-        </state>
+        <state relative-caret-position="-120" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/code-challenges/401/ll-merge/ll-merge.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="244">
           <caret line="47" selection-start-line="47" selection-end-line="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code-challenges/401/FizzBuzzTree/__test__/fizzBuzzTree.test.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code-challenges/401/kth-from-the-end/.eslintrc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="19" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code-challenges/401/kth-from-the-end/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="101" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code-challenges/401/FizzBuzzTree/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="319">
+          <caret line="101" column="18" selection-start-line="101" selection-start-column="18" selection-end-line="101" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code-challenges/401/kth-from-the-end/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="150">
+            <caret line="10" column="27" selection-start-line="10" selection-end-line="10" selection-end-column="27" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code-challenges/401/FizzBuzzTree/.eslintrc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="1" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code-challenges/401/kth-from-the-end/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="33" selection-end-line="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code-challenges/401/FizzBuzzTree/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="33" selection-start-line="33" selection-end-line="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code-challenges/401/code-tree/tree.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="244">
+          <caret line="93" column="1" lean-forward="true" selection-start-line="2" selection-end-line="93" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code-challenges/401/FizzBuzzTree/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="210">
+            <caret line="14" column="135" selection-start-line="14" selection-start-column="135" selection-end-line="14" selection-end-column="135" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code-challenges/401/FizzBuzzTree/fizzBuzzTree.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="214">
+          <caret line="109" column="4" selection-start-line="109" selection-start-column="4" selection-end-line="109" selection-end-column="4" />
         </state>
       </provider>
     </entry>
