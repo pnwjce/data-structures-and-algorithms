@@ -94,3 +94,4 @@ class BinaryTree {
 }
 
 
+modules.exports = BinaryTree;
