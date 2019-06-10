@@ -127,6 +127,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs.jest.jest_package" value="$PROJECT_DIR$/code-tree/node_modules/jest" />
@@ -179,6 +180,14 @@
       <workItem from="1559843450890" duration="3801000" />
     </task>
     <servers />
+  </component>
+  <component name="TestHistory">
+    <history-entry file="tree_methods_test - 2019.06.10 at 01h 51m 23s.xml">
+      <configuration name="tree methods test" configurationId="JavaScriptTestRunnerJest" />
+    </history-entry>
+    <history-entry file="tree_methods_test - 2019.06.10 at 01h 52m 33s.xml">
+      <configuration name="tree methods test" configurationId="JavaScriptTestRunnerJest" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
     <option name="totallyTimeSpent" value="3801000" />
